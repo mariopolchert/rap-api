@@ -32,9 +32,9 @@ app.get("/api/rappers/:rapperName", (request, response) => {
     console.log(rapName);
     if (rappers[rapName]) {
         response.json(rappers[rapName]);
-    } else response.json(rappers['dylan']);
+    } else response.json(rappers["dylan"]);
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
